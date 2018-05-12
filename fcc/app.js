@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navigation } from './portfolio/navigation'
+import { Navigation } from './portfolio/navigation';
 
 class App extends Component {
   render() {
