@@ -1,50 +1,50 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './index.js',
+    entry: "./index.js",
 
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/'
-  },
-  devtool: 'inline-source-map',
-  devServer: {
-  },
+    output: {
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js",
+        publicPath: "/"
+    },
+    devtool: "inline-source-map",
+    devServer: {
+    },
 
-  plugins: [
+    plugins: [
 
-    new HtmlWebpackPlugin({ //production
-        hash: false,
-        template: './index.html',
-        filename: path.join(__dirname, 'dist','index.html')
-    })
-  ],
+        new HtmlWebpackPlugin({ // production
+            hash: false,
+            template: "./index.html",
+            filename: path.join(__dirname, "dist", "index.html")
+        })
+    ],
 
-   module: {
+    module: {
 	  rules: [
 	    {
-	      test:  /\.js$/,
+	      test: /\.js$/,
 	      exclude: /(node_modules|bower_components)/,
 	      use: {
-	        loader: 'babel-loader',
+	        loader: "babel-loader",
 	        options: {
-	          presets: ['es2015', 'react']
+	          presets: ["env", "react"]
 	        }
 	      }
 	    },
-      {
-        test: /\.s?css$/,
+            {
+                test: /\.s?css$/,
 	    	use: [
 		    "style-loader", // creates style nodes from JS strings
 		    "css-loader", // translates CSS into CommonJS
 		    "sass-loader" // compiles Sass to CSS
 		     ]
-      }
+            }
 	  ]
-  }
+    }
 
 
 };

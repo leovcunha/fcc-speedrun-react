@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
-import { Navigation } from './portfolio/navigation';
+import React, { Component } from "react";
+import { Header, Content, Sidebar } from "./portfolio";
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>My React App!</h1>
-        <Navigation />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <Header/>
+                <div className="row">
+                    <Sidebar/>
+                    <Content/>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
