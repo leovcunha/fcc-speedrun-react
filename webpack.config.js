@@ -12,6 +12,7 @@ module.exports = {
     },
     devtool: "inline-source-map",
     devServer: {
+        historyApiFallback: true
     },
 
     plugins: [
@@ -25,24 +26,35 @@ module.exports = {
 
     module: {
 	  rules: [
-	    {
-	      test: /\.js$/,
-	      exclude: /(node_modules|bower_components)/,
-	      use: {
-	        loader: "babel-loader",
-	        options: {
-	          presets: ["env", "react"]
-	        }
-	      }
-	    },
-            {
-                test: /\.s?css$/,
-	    	use: [
-		    "style-loader", // creates style nodes from JS strings
-		    "css-loader", // translates CSS into CommonJS
-		    "sass-loader" // compiles Sass to CSS
-		     ]
+        {
+            test: /\.js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+                loader: "babel-loader",
+                options: {
+                presets: ["env", "react"]
+                }
             }
+        },
+        {
+            test: /\.s?css$/,
+            use: [
+                "style-loader", // creates style nodes from JS strings
+                "css-loader", // translates CSS into CommonJS
+                "sass-loader" // compiles Sass to CSS
+            ]
+        },
+        {
+            test: /\.(jpe?g|png|gif|ico)$/i,
+            use: [
+                {
+                loader: 'file-loader',
+                options: {
+                name: '[name].[ext]'
+                }
+                }
+            ]
+        },
 	  ]
     }
 

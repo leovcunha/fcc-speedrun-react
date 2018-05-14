@@ -16,37 +16,37 @@
 
 | Project                                                                                     | Complete Date | Blog Post | Code Link | Demo |
 | ------------------------------------------------------------------------------------------- | ------------- | --------- | --------- | ---- |
-| [Build a Tribute Page](./fcc/frontend/tribute-page)                                         |               |           |           |      |
-| [Build a Personal Portfolio Webpage](./fcc/frontend/portfolio)                              |               |           |           |      |
-| [Build a Random Quote Machine](./fcc/frontend/random-quote-machine)                         |               |           |           |      |
-| [Show the Local Weather](./fcc/frontend/local-weather)                                      |               |           |           |      |
-| [Build a Wikipedia Viewer](./fcc/frontend/wikipedia-viewer)                                 |               |           |           |      |
-| [Use the Twitch.tv JSON API](./fcc/frontend/twitch-client)                                  |               |           |           |      |
-| [Build a JavaScript Calculator](./fcc/frontend/calculator)                                  |               |           |           |      |
-| [Build a Pomodoro Clock](./fcc/frontend/pomodoro-clock)                                     |               |           |           |      |
-| [Build a Tic Tac Toe Game](./fcc/frontend/tictactoe-game)                                   |               |           |           |      |
-| [Build a Simon Game](./fcc/frontend/simon-game)                                             |               |           |           |      |
-| [Build a Markdown Previewer](./fcc/data-vis/markdown-previewer)                             |               |           |           |      |
-| [Build a Camper Leaderboard](./fcc/data-vis/camper-leaderboard)                             |               |           |           |      |
-| [Build a Recipe Box](./fcc/data-vis/recipe-box)                                             |               |           |           |      |
-| [Build the Game of Life](./fcc/data-vis/game-of-life)                                       |               |           |           |      |
-| [Build a Roguelike Dungeon Crawler](./fcc/data-vis/dungeon-crawler)                         |               |           |           |      |
-| [Visualize Data with a Bar Chart](./fcc/data-vis/bar-chart)                                 |               |           |           |      |
-| [Visualize Data with a Scatterplot Graph](./fcc/data-vis/scatterplot-graph)                 |               |           |           |      |
-| [Visualize Data with a Heat Map](./fcc/data-vis/heat-map)                                   |               |           |           |      |
-| [Show National Contiguity with a Force Directed Graph](./fcc/data-vis/force-directed-graph) |               |           |           |      |
-| [Map Data Across the Globe](./fcc/data-vis/data-across-globe)                               |               |           |           |      |
-| [Timestamp Microservice](./fcc/backend/api-timestamp)                                       |               |           |           |      |
-| [Request Header Parser Microservice](./fcc/backend/api-request-header)                      |               |           |           |      |
-| [URL Shortener Microservice](./fcc/backend/api-url-shortener)                               |               |           |           |      |
-| [Image Search Abstraction Layer](./fcc/backend/api-image-search)                            |               |           |           |      |
-| [File Metadata Microservice](./fcc/backend/api-file-metadata)                               |               |           |           |      |
-| [Build a Voting App](./fcc/backend/app-voting)                                              |               |           |           |      |
-| [Build a Nightlife Coordination App](./fcc/backend/app-nightlife)                           |               |           |           |      |
-| [Chart the Stock Market](./fcc/backend/app-stock-market)                                    |               |           |           |      |
-| [Manage a Book Trading Club](./fcc/backend/app-book-trading)                                |               |           |           |      |
-| [Build a Pinterest Clone](./fcc/backend/app-pinterest-clone)                                |               |           |           |      |
-| [Comprehensive Portfolio of Progress](./fcc/portfolio)                             |               |           |           |      |
+| [Build a Tribute Page](./src/frontend/tribute-page)                                         |     13/05     |           |           |      |
+| [Build a Personal Portfolio Webpage](./src/frontend/portfolio)                              |               |           |           |      |
+| [Build a Random Quote Machine](./src/frontend/random-quote-machine)                         |               |           |           |      |
+| [Show the Local Weather](./src/frontend/local-weather)                                      |               |           |           |      |
+| [Build a Wikipedia Viewer](./src/frontend/wikipedia-viewer)                                 |               |           |           |      |
+| [Use the Twitch.tv JSON API](./src/frontend/twitch-client)                                  |               |           |           |      |
+| [Build a JavaScript Calculator](./src/frontend/calculator)                                  |               |           |           |      |
+| [Build a Pomodoro Clock](./src/frontend/pomodoro-clock)                                     |               |           |           |      |
+| [Build a Tic Tac Toe Game](./src/frontend/tictactoe-game)                                   |               |           |           |      |
+| [Build a Simon Game](./src/frontend/simon-game)                                             |               |           |           |      |
+| [Build a Markdown Previewer](./src/data-vis/markdown-previewer)                             |               |           |           |      |
+| [Build a Camper Leaderboard](./src/data-vis/camper-leaderboard)                             |               |           |           |      |
+| [Build a Recipe Box](./src/data-vis/recipe-box)                                             |               |           |           |      |
+| [Build the Game of Life](./src/data-vis/game-of-life)                                       |               |           |           |      |
+| [Build a Roguelike Dungeon Crawler](./src/data-vis/dungeon-crawler)                         |               |           |           |      |
+| [Visualize Data with a Bar Chart](./src/data-vis/bar-chart)                                 |               |           |           |      |
+| [Visualize Data with a Scatterplot Graph](./src/data-vis/scatterplot-graph)                 |               |           |           |      |
+| [Visualize Data with a Heat Map](./src/data-vis/heat-map)                                   |               |           |           |      |
+| [Show National Contiguity with a Force Directed Graph](./src/data-vis/force-directed-graph) |               |           |           |      |
+| [Map Data Across the Globe](./src/data-vis/data-across-globe)                               |               |           |           |      |
+| [Timestamp Microservice](./src/backend/api-timestamp)                                       |               |           |           |      |
+| [Request Header Parser Microservice](./src/backend/api-request-header)                      |               |           |           |      |
+| [URL Shortener Microservice](./src/backend/api-url-shortener)                               |               |           |           |      |
+| [Image Search Abstraction Layer](./src/backend/api-image-search)                            |               |           |           |      |
+| [File Metadata Microservice](./src/backend/api-file-metadata)                               |               |           |           |      |
+| [Build a Voting App](./src/backend/app-voting)                                              |               |           |           |      |
+| [Build a Nightlife Coordination App](./src/backend/app-nightlife)                           |               |           |           |      |
+| [Chart the Stock Market](./src/backend/app-stock-market)                                    |               |           |           |      |
+| [Manage a Book Trading Club](./src/backend/app-book-trading)                                |               |           |           |      |
+| [Build a Pinterest Clone](./src/backend/app-pinterest-clone)                                |               |           |           |      |
+| [Comprehensive Portfolio of Progress](./src/portfolio)                             |               |           |           |      |
 
 
 
