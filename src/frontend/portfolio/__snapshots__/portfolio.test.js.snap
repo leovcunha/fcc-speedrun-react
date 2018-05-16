@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`portfolio renders without crashing 1`] = `
+<div>
+  <div
+    className="jumbotron portfolio"
+  >
+    <div
+      className="row justify-content-between"
+    >
+      <p
+        className="float-left font-weight-light"
+      >
+        <a
+          href="#personalinfo"
+        >
+          ||    About    |
+        </a>
+        <a
+          href="#projects"
+        >
+          |    Projects    |
+        </a>
+        <a
+          href="#contact"
+        >
+          |   Contacts    ||
+        </a>
+      </p>
+      <p
+        className="float-right font-weight-light"
+      >
+        <a
+          href="http://github.com/leovcunha"
+        >
+          github   /   
+        </a>
+        <a
+          href="http://twitter.com/leovcunha"
+        >
+          twitter    /   
+        </a>
+        <a
+          href="http://linkedin.com/leovcunha"
+        >
+          linkedin
+        </a>
+      </p>
+    </div>
+    <div
+      className="row jumbotron"
+      id="personalinfo"
+    >
+      <div
+        className="col-sm-6"
+      >
+        <img
+          className="img-fluid w-100 h-auto rounded-circle"
+          src="https://images.pexels.com/photos/163125/board-printed-circuit-board-computer-electronics-163125.jpeg"
+        />
+      </div>
+      <div
+        className="col-sm-6"
+      >
+        <h4
+          className="text-justify p-3"
+        >
+          Hi I'm Leo V. Cunha. I'm an Electrical Engineer , passionate for Software Development, Computer Science and things related. I'm also a father and husband and I love my wife and daughter. 
+        </h4>
+      </div>
+    </div>
+    <div>
+      <div
+        className="bg-info row text-white h2 justify-content-center"
+        id="projects"
+      >
+        Portfolio
+      </div>
+      <div
+        className="bg-info row"
+      >
+        <div
+          className="col-sm-6 justify-content-center"
+        >
+          <img
+            className="img-fluid w-100 h-auto"
+            src="test-file-stub"
+          />
+          <h5
+            className="font-weight-light text-white"
+          >
+            Movie Recommendation
+          </h5>
+          <img
+            className="img-fluid w-100 h-auto"
+            src="test-file-stub"
+          />
+          <h5
+            className="font-weight-light text-white"
+          >
+            Tribute Page
+          </h5>
+          <img
+            className="img-fluid w-100 h-auto"
+            src="test-file-stub"
+          />
+          <h5
+            className="font-weight-light text-white"
+          >
+            Coming soon...=)
+          </h5>
+        </div>
+        <div
+          className="col-sm-6 justify-content-center"
+        >
+          <img
+            className="img-fluid w-100 h-auto"
+            src="test-file-stub"
+          />
+          <h5
+            className="font-weight-light text-white"
+          >
+            Web Notes
+          </h5>
+          <img
+            className="img-fluid w-100 h-auto"
+            src="test-file-stub"
+          />
+          <h5
+            className="font-weight-light text-white"
+          >
+            Coming soon...=)
+          </h5>
+          <img
+            className="img-fluid w-100 h-auto"
+            src="test-file-stub"
+          />
+          <h5
+            className="font-weight-light text-white"
+          >
+            Coming soon...=)
+          </h5>
+        </div>
+      </div>
+    </div>
+    <form
+      className="col-sm-8 mt-5"
+      id="contact"
+    >
+      <h5>
+        Make contact with me:
+      </h5>
+      <br />
+      <div
+        className="form-group"
+      >
+        <label
+          for="FormControlInput1"
+        >
+          Email address
+        </label>
+        <input
+          className="form-control"
+          id="FormControlInput1"
+          placeholder="name@example.com"
+          type="email"
+        />
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          for="FormControlTextarea1"
+        >
+          Message
+        </label>
+        <textarea
+          className="form-control"
+          id="FormControlTextarea1"
+          rows="3"
+        />
+      </div>
+      <button
+        className="btn btn-primary"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+`;
