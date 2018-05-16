@@ -26,6 +26,11 @@ export default function Sidebar() {
                                 <Link to="/portfolio">Portfolio</Link>
                             </div>
                         </div>
+                        <div id="collapseThree" className="collapse multi-collapse" aria-labelledby="headingOne" data-parent="#accordionbar">
+                            <div className="card-body">
+                                <Link to="/random-quote-machine">Random Quote Machine</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
