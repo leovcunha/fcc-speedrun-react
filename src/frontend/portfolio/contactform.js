@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactForm() {
     return (
-        <form className="col-sm-8">
+        <form className="col-sm-8 mt-5" id="contact">
             <h5>Make contact with me:</h5>
             <br/>
             <div className="form-group">

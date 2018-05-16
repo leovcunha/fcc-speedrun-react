@@ -1,10 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import TributePage from '../portfolio';
+import Portfolio from '../portfolio';
 
 describe('portfolio', () => {
     it('renders without crashing', () => {
-		const component = renderer.create(<Portfolio/>).toJSON();
+		const component = renderer.create(<div><Portfolio/></div>).toJSON();
 		expect(component).toMatchSnapshot();
     });
 });
