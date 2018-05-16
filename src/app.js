@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Header, Content, Sidebar } from "./portfolio";
+import { Header, Content, Sidebar } from "./webpage";
 
 export default class App extends Component {
     constructor(props) {
