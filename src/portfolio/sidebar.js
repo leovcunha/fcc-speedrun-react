@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Sidebar() {
     return (
 
-        <div className="col-sm-2" id="navbarToggleExternalContent">
+        <div className="col-sm-2 flex-column" id="navbarToggleExternalContent">
             <nav className="nav flex-column" >
                 <div className="accordion border border-gray" id="accordionbar">
                     <div className="card">
