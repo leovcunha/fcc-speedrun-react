@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tribute-page renders without crashing 1`] = `
+<div
+  className="random-quote-machine jumbotron"
+  style={
+    Object {
+      "background": "salmon",
+    }
+  }
+>
+  <div
+    className="row h1 justify-content-center"
+  >
+    The Simpsons Random Quote Machine
+  </div>
+  <hr
+    className="p-5"
+  />
+  <div
+    className="row justify-content-center"
+  >
+    <img
+      className="w-25 h-25"
+      src={undefined}
+    />
+  </div>
+  <div
+    className="row justify-content-center"
+  />
+  <div
+    className="row justify-content-center"
+  >
+    <a
+      class="twitter-share-button btn btn-primary"
+      data-size="large"
+      href="https://twitter.com/intent/tweet?text=undefined"
+    >
+      Tweet
+    </a>
+    <button
+      className="getquote btn btn-primary"
+      onClick={[Function]}
+    >
+      Get inspired
+    </button>
+  </div>
+</div>
+`;
