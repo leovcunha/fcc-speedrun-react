@@ -10,7 +10,8 @@ export default function Sidebar() {
                     <div className="card">
                         <div className="card-header" id="headingOne">
                             <h5 className="mb-0">
-                                <button className="btn btn-link" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="collapseOne collapseTwo">
+                                <button className="btn btn-link" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false"
+                                    aria-controls="collapseOne collapseTwo collapseThree collapseFour">
                                     Frontend
                                 </button>
                             </h5>
@@ -29,6 +30,11 @@ export default function Sidebar() {
                         <div id="collapseThree" className="collapse multi-collapse" aria-labelledby="headingOne" data-parent="#accordionbar">
                             <div className="card-body">
                                 <Link to="/random-quote-machine">Random Quote Machine</Link>
+                            </div>
+                        </div>
+                        <div id="collapseFour" className="collapse multi-collapse" aria-labelledby="headingOne" data-parent="#accordionbar">
+                            <div className="card-body">
+                                <Link to="/local-weather">Local Weather</Link>
                             </div>
                         </div>
                     </div>
