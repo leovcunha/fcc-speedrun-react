@@ -12,7 +12,8 @@ export default class LocalWeather extends Component {
                     icon: "",
                     description: "",
 
-                }]
+                }],
+                name: ""
             }
 
         };
@@ -26,9 +27,9 @@ export default class LocalWeather extends Component {
         try {
             this.getPosition()
                 .then(pos => {
-                    this.setState({ position: pos });
+                    this.setState({ position: pos.coords });
                 }).then(() =>
-                    axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${this.state.position.coords.latitude}&lon=${this.state.position.coords.longitude}&appid=663256a5a9993f3aa5e9f557920e8f24`)
+                    axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${this.state.position.latitude}&lon=${this.state.position.longitude}&appid=663256a5a9993f3aa5e9f557920e8f24`)
                         .then(res => this.setState({ data: res.data })))
                 .then(() => {
                     this.setState({
@@ -58,13 +59,14 @@ export default class LocalWeather extends Component {
             <div className="local-weather jumbotron">
                 <div className="row h1 justify-content-center">Local Weather</div>
                 <hr className="p-5"/>
+                <div className="row justify-content-center h4">
+                    {this.state.data.name}
+                </div>
                 <div className="row justify-content-center">
                     {(this.state.data.weather[0].icon !== "") && <img src={`http://openweathermap.org/img/w/${this.state.data.weather[0].icon}.png`} />}
                 </div>
-                <div className="row justify-content-center">{this.state.data.weather[0].description}</div>
-                <div className="row justify-content-center">
+                <div className="row justify-content-center h5">{this.state.data.weather[0].description}</div>
 
-                </div>
                 <div className="row justify-content-center mt-5">
                     <div className="custom-control custom-radio">
                         <input type="radio" id="customRadio1" name="customRadio" className="custom-control-input"/>
