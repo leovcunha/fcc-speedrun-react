@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import "./local-weather.scss";
+import WeatherIcon from "./weathericon";
+import MainInfo from "./maininfo";
 
 
 export default class LocalWeather extends Component {
@@ -14,7 +16,8 @@ export default class LocalWeather extends Component {
 
                 }],
                 name: ""
-            }
+            },
+            celsius: true
 
         };
     }
@@ -39,13 +42,17 @@ export default class LocalWeather extends Component {
                             temp_max: (this.state.data.main.temp_max * (9 / 5)) + 32
                         }
                     });
-                });
-
-
-            return "success";
+                })
+                .catch((error) => { throw error });
         } catch (error) {
-            return error;
+            alert(error.message);
         }
+        return true;
+    }
+
+    changeTmpScale() {
+        const helper = this.state.celsius;
+        this.setState({ celsius: !helper });
     }
 
     componentDidMount() {
@@ -53,8 +60,6 @@ export default class LocalWeather extends Component {
     }
 
     render() {
-        console.log(this.state.position);
-        console.log(this.state.data);
         return (
             <div className="local-weather jumbotron">
                 <div className="row h1 justify-content-center">Local Weather</div>
@@ -62,18 +67,19 @@ export default class LocalWeather extends Component {
                 <div className="row justify-content-center h4">
                     {this.state.data.name}
                 </div>
-                <div className="row justify-content-center">
-                    {(this.state.data.weather[0].icon !== "") && <img src={`http://openweathermap.org/img/w/${this.state.data.weather[0].icon}.png`} />}
-                </div>
+                <WeatherIcon icon={this.state.data.weather[0].icon} />
                 <div className="row justify-content-center h5">{this.state.data.weather[0].description}</div>
+                <MainInfo CorF={this.state.celsius} celsius={this.state.data.main} fahrenheit={this.state.fahrenheit} />
 
                 <div className="row justify-content-center mt-5">
                     <div className="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="customRadio" className="custom-control-input"/>
+                        <input type="radio" id="customRadio1" name="customRadio" className="custom-control-input"
+                            onSelect={() => this.changeTmpScale}/>
                         <label className="custom-control-label mr-5" for="customRadio1">Celsius</label>
                     </div>
                     <div className="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio" className="custom-control-input ml-5"/>
+                        <input type="radio" id="customRadio2" name="customRadio" className="custom-control-input ml-5"
+                            onSelect={() => this.changeTmpScale}/>/>
                         <label className="custom-control-label" for="customRadio2">Fahrenheit</label>
                     </div>
                 </div>
