@@ -4,6 +4,7 @@ import TributePage from "../frontend/tribute-page";
 import Portfolio from "../frontend/portfolio";
 import RandomQuoteMachine from "../frontend/random-quote-machine";
 import LocalWeather from "../frontend/local-weather";
+import WikipediaViewer from "../frontend/wikipedia-viewer"
 import Home from "./home";
 
 
@@ -16,6 +17,7 @@ export default function Content(props) {
                 <Route path='/portfolio' component={Portfolio}/>
                 <Route path='/random-quote-machine' component={RandomQuoteMachine}/>
                 <Route path='/local-weather' component={LocalWeather}/>
+                <Route path='/wikipedia-viewer' component={WikipediaViewer}/>
             </Switch>
         </main>
     );
