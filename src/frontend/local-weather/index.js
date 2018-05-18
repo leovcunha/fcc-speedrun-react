@@ -13,12 +13,21 @@ export default class LocalWeather extends Component {
                 weather: [{
                     icon: "",
                     description: "",
-
                 }],
-                name: ""
+                name: "Loading",
+                main:{
+                    temp:0,
+                    temp_min:0,
+                    temp_max:0,
+                    humidity:0
+                },
             },
-            celsius: true
-
+            celsius: true,
+            fahrenheit: {
+                temp:0,
+                temp_min:0,
+                temp_max:0,
+            }
         };
     }
     getPosition(options) {
@@ -60,6 +69,7 @@ export default class LocalWeather extends Component {
     }
 
     render() {
+        console.log(this.state.data);
         return (
             <div className="local-weather jumbotron">
                 <div className="row h1 justify-content-center">Local Weather</div>
@@ -74,12 +84,12 @@ export default class LocalWeather extends Component {
                 <div className="row justify-content-center mt-5">
                     <div className="custom-control custom-radio">
                         <input type="radio" id="customRadio1" name="customRadio" className="custom-control-input"
-                            onSelect={() => this.changeTmpScale}/>
+                            onSelect={() => this.changeTmpScale()}/>
                         <label className="custom-control-label mr-5" for="customRadio1">Celsius</label>
                     </div>
                     <div className="custom-control custom-radio">
                         <input type="radio" id="customRadio2" name="customRadio" className="custom-control-input ml-5"
-                            onSelect={() => this.changeTmpScale}/>/>
+                            onSelect={() => this.changeTmpScale()}/>/>
                         <label className="custom-control-label" for="customRadio2">Fahrenheit</label>
                     </div>
                 </div>

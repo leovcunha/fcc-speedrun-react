@@ -13,7 +13,7 @@ export default function MainInfo(props) {
                 </div>
                 <div className="row justify-content-center h5"> Min: {props.CorF ?
                     <h5>{props.celsius.temp_min}</h5> : <h5>{props.fahrenheit.temp_min}</h5> }</div>
-                <div className="row justify-content-center h5"> Humidity: {this.state.data.main.humidity}</div>
+                <div className="row justify-content-center h5"> Humidity: {props.celsius.humidity}</div>
 
             </div>) }</div>
     );
