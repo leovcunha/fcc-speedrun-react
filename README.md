@@ -19,7 +19,7 @@
 | [Build a Tribute Page](./src/frontend/tribute-page)                                         |     13/05     |           |           |      |
 | [Build a Personal Portfolio Webpage](./src/frontend/portfolio)                              |     16/05     |           |           |      |
 | [Build a Random Quote Machine](./src/frontend/random-quote-machine)                         |     16/05     |           |           |      |
-| [Show the Local Weather](./src/frontend/local-weather)                                      |               |           |           |      |
+| [Show the Local Weather](./src/frontend/local-weather)                                      |     18/05     |           |           |      |
 | [Build a Wikipedia Viewer](./src/frontend/wikipedia-viewer)                                 |               |           |           |      |
 | [Use the Twitch.tv JSON API](./src/frontend/twitch-client)                                  |               |           |           |      |
 | [Build a JavaScript Calculator](./src/frontend/calculator)                                  |               |           |           |      |
