@@ -15,18 +15,18 @@ export default class LocalWeather extends Component {
                     description: "",
                 }],
                 name: "Loading",
-                main:{
-                    temp:0,
-                    temp_min:0,
-                    temp_max:0,
-                    humidity:0
+                main: {
+                    temp: 0,
+                    temp_min: 0,
+                    temp_max: 0,
+                    humidity: 0
                 },
             },
             celsius: true,
             fahrenheit: {
-                temp:0,
-                temp_min:0,
-                temp_max:0,
+                temp: 0,
+                temp_min: 0,
+                temp_max: 0,
             }
         };
     }
@@ -44,11 +44,13 @@ export default class LocalWeather extends Component {
                     axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${this.state.position.latitude}&lon=${this.state.position.longitude}&appid=663256a5a9993f3aa5e9f557920e8f24`)
                         .then(res => this.setState({ data: res.data })))
                 .then(() => {
+                    const celsius = this.state.data.main;
                     this.setState({
+
                         fahrenheit: {
-                            temp: (this.state.data.main.temp * (9 / 5)) + 32,
-                            temp_min: (this.state.data.main.temp_min * (9 / 5)) + 32,
-                            temp_max: (this.state.data.main.temp_max * (9 / 5)) + 32
+                            temp: ((celsius.temp - 273) * (9 / 5)) + 32,
+                            temp_min: ((celsius.temp_min - 273) * (9 / 5)) + 32,
+                            temp_max: ((celsius.temp_max - 273) * (9 / 5)) + 32
                         }
                     });
                 })
@@ -60,8 +62,9 @@ export default class LocalWeather extends Component {
     }
 
     changeTmpScale() {
-        const helper = this.state.celsius;
-        this.setState({ celsius: !helper });
+        this.setState(prevState => ({
+            celsius: !prevState.celsius
+        }));
     }
 
     componentDidMount() {
@@ -69,7 +72,6 @@ export default class LocalWeather extends Component {
     }
 
     render() {
-        console.log(this.state.data);
         return (
             <div className="local-weather jumbotron">
                 <div className="row h1 justify-content-center">Local Weather</div>
@@ -82,16 +84,7 @@ export default class LocalWeather extends Component {
                 <MainInfo CorF={this.state.celsius} celsius={this.state.data.main} fahrenheit={this.state.fahrenheit} />
 
                 <div className="row justify-content-center mt-5">
-                    <div className="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="customRadio" className="custom-control-input"
-                            onSelect={() => this.changeTmpScale()}/>
-                        <label className="custom-control-label mr-5" for="customRadio1">Celsius</label>
-                    </div>
-                    <div className="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio" className="custom-control-input ml-5"
-                            onSelect={() => this.changeTmpScale()}/>/>
-                        <label className="custom-control-label" for="customRadio2">Fahrenheit</label>
-                    </div>
+                    <button type="button" className="btn btn-secondary" onClick={() => this.changeTmpScale()}>Change Temperature Scale</button>
                 </div>
 
             </div>

@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import RandomQuoteMachine from "../random-quote-machine";
+import LocalWeather from "../local-weather";
 
 describe("tribute-page", () => {
     it("renders without crashing", () => {
-        const component = renderer.create(<RandomQuoteMachine/>).toJSON();
+        const component = renderer.create(<LocalWeather/>).toJSON();
         expect(component).toMatchSnapshot();
     });
 });

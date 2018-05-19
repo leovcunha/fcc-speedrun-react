@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tribute-page renders without crashing 1`] = `
+<div
+  className="local-weather jumbotron"
+>
+  <div
+    className="row h1 justify-content-center"
+  >
+    Local Weather
+  </div>
+  <hr
+    className="p-5"
+  />
+  <div
+    className="row justify-content-center h4"
+  >
+    Loading
+  </div>
+  <div
+    className="row justify-content-center"
+  />
+  <div
+    className="row justify-content-center h5"
+  >
+    
+  </div>
+  <div>
+    <div
+      className="row justify-content-center h5"
+    >
+       Temperature is:  
+      <h5>
+        -273.0
+         C
+      </h5>
+    </div>
+    <div
+      className="row justify-content-center h5"
+    >
+       Max:  
+      <h5>
+        -273.0
+         C
+      </h5>
+    </div>
+    <div
+      className="row justify-content-center h5"
+    >
+       Min:  
+      <h5>
+        -273.0
+         C
+      </h5>
+    </div>
+  </div>
+  <div
+    className="row justify-content-center mt-5"
+  >
+    <button
+      className="btn btn-secondary"
+      onClick={[Function]}
+      type="button"
+    >
+      Change Temperature Scale
+    </button>
+  </div>
+</div>
+`;
