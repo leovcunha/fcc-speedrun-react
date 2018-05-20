@@ -1,8 +1,20 @@
+@mixin transite {
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+}
+
 .wikipedia-viewer {
     height: 1000px;
-    transition-property: background-color;
-    transition-duration: 1s;
-    transition-timing-function: linear;
+    
+    .collapse  {
+        @include transite;
+        display:none;
+    }
 
+    .form-inline {
+        @include transite;
+        margin-top: -40px;
+    }
+    
 
 }

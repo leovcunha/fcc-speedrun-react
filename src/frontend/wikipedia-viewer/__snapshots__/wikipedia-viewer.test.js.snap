@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`wikipedia-viewer renders without crashing 1`] = `
+<div
+  className="wikipedia-viewer jumbotron"
+>
+  <div
+    className="row h1 justify-content-center"
+  >
+    Wikipedia Viewer
+  </div>
+  <hr
+    className="p-5 undefined"
+  />
+  <form
+    className="form-inline justify-content-center"
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group mx-sm-3 mb-5"
+    >
+      <input
+        className="form-control"
+        id="inputSearch"
+        onChange={[Function]}
+        placeholder="Search Wikipedia"
+        type="search"
+        value=""
+      />
+    </div>
+    <button
+      className="btn btn-secondary mb-5"
+      type="submit"
+    >
+      Search
+    </button>
+    <button
+      className="btn btn-secondary ml-2 mb-5"
+      onClick={[Function]}
+    >
+      Random Article
+    </button>
+  </form>
+  <div
+    className="row"
+  />
+</div>
+`;
