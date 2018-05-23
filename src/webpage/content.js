@@ -7,6 +7,7 @@ import LocalWeather from "../frontend/local-weather";
 import WikipediaViewer from "../frontend/wikipedia-viewer";
 import Home from "./home";
 import TwitchClient from "../frontend/twitch-client";
+import Calculator from "../frontend/calculator";
 
 
 export default function Content(props) {
@@ -20,6 +21,7 @@ export default function Content(props) {
                 <Route path='/local-weather' component={LocalWeather}/>
                 <Route path='/wikipedia-viewer' component={WikipediaViewer}/>
                 <Route path='/twitch-client' component={TwitchClient}/>
+                <Route path='/calculator' component={Calculator}/>
             </Switch>
         </main>
     );

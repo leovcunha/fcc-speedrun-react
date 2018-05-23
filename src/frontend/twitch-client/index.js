@@ -29,7 +29,7 @@ export default class TwitchClient extends Component {
     }
 
     mapUsersData() {
-        return this.state.streamers.map(user => <TwitchCard key={user.data._id} name={user.data.display_name}
+        return this.state.streamers.map(user => <TwitchCard key={user.data.id} name={user.data.display_name}
             logo={user.data.logo} url={user.data.url} status={user.data.status} stream={user.stream}/>);
     }
 

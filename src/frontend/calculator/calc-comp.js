@@ -1,7 +1,7 @@
 
 import React from "react";
 
-export default function TwitchCard(props) {
+export default function CalcComp(props) {
     const currently = props.stream === null ? "offline" : "online";
     const color = currently === "online" ? "green" : "red";
     return (

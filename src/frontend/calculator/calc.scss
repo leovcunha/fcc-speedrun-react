@@ -1,0 +1,16 @@
+.calculator {
+    background: linear-gradient(to right,#cf9413, #b9b8b8);
+    color: rgba(255, 255, 255, 0.932);
+    min-height: 1000px;
+
+    .card {
+        flex-direction: row;
+        color: black;
+        
+        img {
+            width: 150px;
+            height: 150px;
+        }
+        
+    }
+}

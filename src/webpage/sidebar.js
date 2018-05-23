@@ -47,6 +47,11 @@ export default function Sidebar() {
                                 <Link to="/twitch-client">Twitch.tv JSON Api</Link>
                             </div>
                         </div>
+                        <div id="collapseSeven" className="collapse multi-collapse" aria-labelledby="headingOne" data-parent="#accordionbar">
+                            <div className="card-body">
+                                <Link to="/calculator">Calculator</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
