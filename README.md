@@ -21,7 +21,7 @@
 | [Build a Random Quote Machine](./src/frontend/random-quote-machine)                         |     16/05     |           |           |      |
 | [Show the Local Weather](./src/frontend/local-weather)                                      |     18/05     |           |           |      |
 | [Build a Wikipedia Viewer](./src/frontend/wikipedia-viewer)                                 |     20/05     |           |           |      |
-| [Use the Twitch.tv JSON API](./src/frontend/twitch-client)                                  |               |           |           |      |
+| [Use the Twitch.tv JSON API](./src/frontend/twitch-client)                                  |     22/05     |           |           |      |
 | [Build a JavaScript Calculator](./src/frontend/calculator)                                  |               |           |           |      |
 | [Build a Pomodoro Clock](./src/frontend/pomodoro-clock)                                     |               |           |           |      |
 | [Build a Tic Tac Toe Game](./src/frontend/tictactoe-game)                                   |               |           |           |      |
