@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`twitch client renders without crashing 1`] = `
+<div
+  className="twitch-client jumbotron"
+>
+  <div
+    className="row h1 justify-content-center"
+  >
+    Twitch Client
+  </div>
+  <hr
+    className="p-5"
+  />
+</div>
+`;

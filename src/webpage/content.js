@@ -4,8 +4,9 @@ import TributePage from "../frontend/tribute-page";
 import Portfolio from "../frontend/portfolio";
 import RandomQuoteMachine from "../frontend/random-quote-machine";
 import LocalWeather from "../frontend/local-weather";
-import WikipediaViewer from "../frontend/wikipedia-viewer"
+import WikipediaViewer from "../frontend/wikipedia-viewer";
 import Home from "./home";
+import TwitchClient from "../frontend/twitch-client";
 
 
 export default function Content(props) {
@@ -18,6 +19,7 @@ export default function Content(props) {
                 <Route path='/random-quote-machine' component={RandomQuoteMachine}/>
                 <Route path='/local-weather' component={LocalWeather}/>
                 <Route path='/wikipedia-viewer' component={WikipediaViewer}/>
+                <Route path='/twitch-client' component={TwitchClient}/>
             </Switch>
         </main>
     );

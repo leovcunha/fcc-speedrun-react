@@ -1,16 +1,11 @@
 @mixin transite {
-    transition: all 1s linear;
-    -webkit-transition: all 1s linear;
+    transition: all 2s linear;
+    -webkit-transition: all 2s linear;
 }
 
 .wikipedia-viewer {
-    height: 1000px;
+    min-height: 800px;
     
-    .collapse  {
-        @include transite;
-        display:none;
-    }
-
     .form-inline {
         @include transite;
         margin-top: -40px;
