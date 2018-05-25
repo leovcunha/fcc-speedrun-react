@@ -3,14 +3,26 @@
     color: rgba(255, 255, 255, 0.932);
     min-height: 1000px;
 
-    .card {
-        flex-direction: row;
-        color: black;
-        
-        img {
-            width: 150px;
-            height: 150px;
+    table, th, td {
+        background: linear-gradient(to left,#cf9413, #b9b8b8);
+        border: 1px solid black;
+        text-align: center;
+        padding: 20px 45px;
+        border-collapse: separate;
+
+        .display1 {
+            background: #d8d8d8;
+            border-top: none;
+            position: relative;
+            top: -2px;
+            text-align: right;
         }
-        
+
+        .display2 {
+            background: #d8d8d8;
+            text-align: right;
+            border-bottom: none;
+            padding: 2px;
+        }
     }
 }

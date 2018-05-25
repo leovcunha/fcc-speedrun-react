@@ -19,8 +19,20 @@ export default class Calculator extends Component {
             <div className="calculator jumbotron">
                 <div className="row h1 justify-content-center">Calculator</div>
                 <hr className="p-5"/>
-                <div className="calc">
+                <div className="calc row justify-content-center">
                     <table>
+                        <tr>
+                        <td className="display2" colspan="4">display</td>
+                        </tr>
+                        <tr>
+                        <td className="display1" colspan="4">display</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">C</td>
+                            <td>&radic;</td>
+                            <td>%</td>
+
+                        </tr>
                         <tr>
                             <td>1</td>
                             <td>2</td>
@@ -41,16 +53,11 @@ export default class Calculator extends Component {
                         </tr>
                         <tr>
                             <td>0</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>.</td>
+                            <td>=</td>
+                            <td>/</td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
+
                     </table>
                 </div>
 
