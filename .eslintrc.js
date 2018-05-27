@@ -23,10 +23,7 @@ module.exports = {
             "error",
             4
         ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
+        "linebreak-style": "off",
         "quotes": [
             "error",
             "double"
@@ -44,6 +41,7 @@ module.exports = {
 		"object-curly-spacing": ["error", "always"],
 		"require-jsdoc": "off",
 		"semi": ["error", "always", {"omitLastInOneLineBlock": true}],
-		"valid-typeof": "warn"
+        "valid-typeof": "warn",
+        "class-methods-use-this": "off"
     }
 };
