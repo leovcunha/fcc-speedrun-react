@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pomodoro renders without crashing 1`] = `
+<div
+  className="pomodoro jumbotron"
+>
+  <div
+    className="row h1 justify-content-center"
+  >
+    Pomodoro Clock
+  </div>
+  <hr
+    className="p-5"
+  />
+  <div
+    className="row justify-content-around"
+  >
+    <div
+      aria-label="Basic example"
+      className="btn-group"
+      role="group"
+    >
+      <button
+        className="btn btn-danger"
+        onClick={[Function]}
+        type="button"
+      >
+        -
+      </button>
+      <button
+        className="btn btn-danger"
+        type="button"
+      >
+        Timer
+      </button>
+      <button
+        className="btn btn-danger"
+        onClick={[Function]}
+        type="button"
+      >
+        +
+      </button>
+    </div>
+    <div
+      aria-label="Basic example"
+      className="btn-group"
+      role="group"
+    >
+      <button
+        className="btn btn-danger"
+        onClick={[Function]}
+        type="button"
+      >
+        -
+      </button>
+      <button
+        className="btn btn-danger"
+        type="button"
+      >
+        Break
+      </button>
+      <button
+        className="btn btn-danger"
+        onClick={[Function]}
+        type="button"
+      >
+        +
+      </button>
+    </div>
+  </div>
+  <div
+    className="row timer justify-content-center"
+  >
+    25
+                    :00
+  </div>
+  <div
+    className="row h1 justify-content-center"
+  >
+    5
+                    :00
+  </div>
+  <div
+    className="row justify-content-center"
+  >
+    <button
+      className="btn btn-danger"
+      onClick={[Function]}
+      type="button"
+    >
+      Start
+    </button>
+    <button
+      className="btn btn-danger"
+      onClick={[Function]}
+      type="button"
+    >
+      Reset
+    </button>
+  </div>
+</div>
+`;

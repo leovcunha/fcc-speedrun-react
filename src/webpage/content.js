@@ -8,7 +8,7 @@ import WikipediaViewer from "../frontend/wikipedia-viewer";
 import Home from "./home";
 import TwitchClient from "../frontend/twitch-client";
 import Calculator from "../frontend/calculator";
-
+import Pomodoro from "../frontend/pomodoro-clock";
 
 export default function Content(props) {
     return (
@@ -22,6 +22,7 @@ export default function Content(props) {
                 <Route path='/wikipedia-viewer' component={WikipediaViewer}/>
                 <Route path='/twitch-client' component={TwitchClient}/>
                 <Route path='/calculator' component={Calculator}/>
+                <Route path='/pomodoro' component={Pomodoro}/>
             </Switch>
         </main>
     );
