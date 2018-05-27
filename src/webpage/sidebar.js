@@ -57,6 +57,11 @@ export default function Sidebar() {
                                 <Link to="/pomodoro">Pomodoro Clock</Link>
                             </div>
                         </div>
+                        <div id="collapseNine" className="collapse multi-collapse" aria-labelledby="headingOne" data-parent="#accordionbar">
+                            <div className="card-body">
+                                <Link to="/tictactoe">Tic Tac Toe</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>

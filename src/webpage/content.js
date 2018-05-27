@@ -9,6 +9,7 @@ import Home from "./home";
 import TwitchClient from "../frontend/twitch-client";
 import Calculator from "../frontend/calculator";
 import Pomodoro from "../frontend/pomodoro-clock";
+import TicTacToe from "../frontend/tictactoe-game";
 
 export default function Content(props) {
     return (
@@ -23,6 +24,7 @@ export default function Content(props) {
                 <Route path='/twitch-client' component={TwitchClient}/>
                 <Route path='/calculator' component={Calculator}/>
                 <Route path='/pomodoro' component={Pomodoro}/>
+                <Route path='/tictactoe' component={TicTacToe}/>
             </Switch>
         </main>
     );
