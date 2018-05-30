@@ -1,5 +1,5 @@
 .tictactoe {
-    background: linear-gradient(to right,#ffffff, #a6fffb);
+    background: linear-gradient(to right,#ffffff, #007bff82);
     color: darkblue;
     min-height: 1000px;
 
@@ -10,5 +10,11 @@
         padding: 45px 45px;
         border-collapse: separate;
 
+        td {
+            height: 120px;
+            width: 120px;
+        }
+
     }
+
 }

@@ -48,7 +48,7 @@ export default class Calculator extends Component {
     operationSolver() {
         const operand = this.state.operation;
         const result = eval(operand.replace("%", "*(1/100)"));
-        this.setState({ operation: result, display1: result, ans: result });
+        this.setState({ operation: result.toString(), display1: result.toString(), ans: result.toString() });
         // just because speedrun
     }
 
@@ -57,7 +57,7 @@ export default class Calculator extends Component {
 
         this.setState(prevState => {
             const result = Math.sqrt(parseFloat(prevState.display1));
-            return ({ display1: result, ans: result });
+            return ({ display1: result.toString(), ans: result.toString() });
         });
     }
 
