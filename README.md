@@ -24,7 +24,7 @@
 | [Use the Twitch.tv JSON API](./src/frontend/twitch-client)                                  |     22/05     |           |           |      |
 | [Build a JavaScript Calculator](./src/frontend/calculator)                                  |     27/05     |           |           |      |
 | [Build a Pomodoro Clock](./src/frontend/pomodoro-clock)                                     |     27/05     |           |           |      |
-| [Build a Tic Tac Toe Game](./src/frontend/tictactoe-game)                                   |               |           |           |      |
+| [Build a Tic Tac Toe Game](./src/frontend/tictactoe-game)                                   |     31/05     |           |           |      |
 | [Build a Simon Game](./src/frontend/simon-game)                                             |               |           |           |      |
 | [Build a Markdown Previewer](./src/data-vis/markdown-previewer)                             |               |           |           |      |
 | [Build a Camper Leaderboard](./src/data-vis/camper-leaderboard)                             |               |           |           |      |
