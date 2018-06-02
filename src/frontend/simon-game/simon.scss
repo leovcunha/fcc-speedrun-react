@@ -1,0 +1,47 @@
+.simon {
+    min-height: 900px;
+
+    table {
+        background: white;
+        border: 1px solid black;
+        border-radius: 50%;
+        text-align: center;
+        padding: 20px 20px;
+        border-collapse: separate;
+
+        .bottomright{
+            width: 150px;
+            height: 150px;
+            background: red;
+            border-radius: 0 0 150px 0;
+            -moz-border-radius: 0 0 150px 0;
+            -webkit-border-radius: 0 0 150px 0;
+        }
+        .bottomleft{
+             width: 150px;
+             height: 150px;
+             background: blue;
+             border-radius: 0 0 0 150px;
+             -moz-border-radius: 0 0 0 150px;
+             -webkit-border-radius: 0 0 0 150px;
+        }
+        .topright{
+             width: 150px;
+             height: 150px;
+             background: green;
+             border-radius: 0 150px 0 0;
+             -moz-border-radius: 0 150px 0 0;
+             -webkit-border-radius: 0 150px 0 0;
+        }
+        .topleft{
+             width: 150px;
+             height: 150px;
+             background: orange;
+             border-radius: 150px 0 0 0;
+             -moz-border-radius: 150px 0 0 0;
+             -webkit-border-radius: 150px 0 0 0;
+        }
+
+    }
+
+}

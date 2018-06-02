@@ -6,7 +6,7 @@ module.exports = {
     entry: "./index.js",
 
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "docs"),
         filename: "bundle.js",
         publicPath: "/"
     },
@@ -20,7 +20,7 @@ module.exports = {
         new HtmlWebpackPlugin({ // production
             hash: false,
             template: "./index.html",
-            filename: path.join(__dirname, "dist", "index.html")
+            filename: path.join(__dirname, "docs", "index.html")
         })
     ],
 
@@ -51,7 +51,7 @@ module.exports = {
                         loader: "file-loader",
                         options: {
                             name: "[name].[ext]",
-                            outputPath: path.resolve(__dirname, "dist", "assets"),
+                            outputPath: path.resolve(__dirname, "docs", "assets"),
                             publicPath: "/assets"
                         }
                     }
