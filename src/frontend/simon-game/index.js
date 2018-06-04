@@ -21,29 +21,36 @@ export default class SimonGame extends Component {
             steps: 1,
             playerSequence: [],
             lightUp: 0,
+            strict: false,
+
         };
     }
 
 
     componentDidUpdate(prevProps, prevState) {
-        if (this.state.steps > prevState.steps) {
-            setTimeout(() => this.playGameSequence(this.state.steps), 350);
+        if ((this.state.steps > prevState.steps) && this.state.steps < 11) {
+            setTimeout(() => this.playGameSequence(this.state.steps), 2000);
+        } else if (this.state.steps === 6 && prevState.steps === 10) {
+            this.setState({ displayText: "Victory" });
+            setTimeout(() => this.buttonPress(1), 500);
+            setTimeout(() => this.buttonPress(2), 1000);
+            setTimeout(() => this.buttonPress(3), 1500);
+            setTimeout(() => this.buttonPress(4), 2000);
         }
-
     }
 
     startGame() {
         if (!this.state.start) {
             this.setState({
                 start: true,
-                displayText: this.state.steps < 10 ? `0${this.state.steps}`:`${this.state.steps}`,
-            }, () => this.playGameSequence(this.state.steps) );
-
+                displayText: this.state.steps < 10 ? `0${this.state.steps}` : `${this.state.steps}`,
+            }, () => this.playGameSequence(this.state.steps));
         } else {
             this.setState({
                 start: false,
                 displayText: "START",
                 gameSequence: [],
+                playerSequence: [],
                 steps: 1,
                 lightUp: 0,
             });
@@ -57,60 +64,64 @@ export default class SimonGame extends Component {
 
 
     buttonPress(n, player = false) {
-        console.log("button" + n)
         if (this.state.start) {
             switch (n) {
-                case 1:
-                    this.a1.play();
-                    break;
-                case 2:
-                    this.a2.play();
-                    break;
-                case 3:
-                    this.a3.play();
-                    break;
-                case 4:
-                    this.a4.play();
-                    break;
+            case 1:
+                this.a1.play();
+                break;
+            case 2:
+                this.a2.play();
+                break;
+            case 3:
+                this.a3.play();
+                break;
+            case 4:
+                this.a4.play();
+                break;
+            default:
+                console.log("error");
+                break;
             }
+
             this.lightbuttonUp(n);
 
             if (player) {
-                let seq = this.state.playerSequence.slice();
+                const seq = this.state.playerSequence.slice();
                 seq.push(n);
-                let comparison = seq.map((el, i, ar) => this.matchSequence(i)).reduce((acc, el) => acc * el);
-                console.log(comparison)
-                if (comparison) {
-                    this.setState( prevState => {
-                        const inc = prevState.steps + 1;
-                        return { steps: inc, playerSequence: seq, displayText: inc < 10 ? `0${inc}`:`${inc}`}} );
-                } else {
-                        setTimeout(() => this.setState({ displayText: "!!" }), 1);
-                        setTimeout(() => this.setState({ displayText: this.state.steps < 10 ? `0${this.state.steps}`:`${this.state.steps}` }), 2000);
-                        setTimeout(() => this.playGameSequence(this.state.steps),2000);
-                }
 
+                if (this.matchSequence(seq)) {
+                    if (seq.length < this.state.gameSequence.length) this.setState({ playerSequence: seq });
+                    else if (seq.length === this.state.gameSequence.length) {
+                        this.setState(prevState => {
+                            const inc = prevState.steps + 1;
+                            return { steps: inc, playerSequence: [], displayText: inc < 10 ? `0${inc}` : `${inc}` };
+                        });
+                    }
+                } else {
+                    setTimeout(() => this.setState({ displayText: "!!", playerSequence: [] }), 1);
+                    setTimeout(() => this.setState({ displayText: this.state.steps < 10 ? `0${this.state.steps}` : `${this.state.steps}` }), 2000);
+                    setTimeout(() => this.playGameSequence(this.state.steps), 2000);
+                }
             }
         }
     }
 
     playGameSequence(nSteps) {
-
-        let seq = this.state.gameSequence.slice();
+        const seq = this.state.gameSequence.slice();
 
         if (nSteps > seq.length) {
-            let choice = Math.floor(Math.random() * (4 - 1)) + 1;
+            const choice = Math.floor(Math.random() * (4 - 1)) + 1;
             seq.push(choice);
             this.setState({ gameSequence: seq });
-
         }
-        console.log(seq);
-        seq.forEach((el, i, ar) => setTimeout(() => this.buttonPress(el), i*750), this);
 
+        seq.forEach((el, i, ar) => setTimeout(() => this.buttonPress(el), i * 750), this);
     }
 
-    matchSequence(n) {
-        return ( this.state.playerSequence[n] === this.state.gameSequence[n]);
+    matchSequence(playerSeq) {
+        const comparison = playerSeq.map((el, i, ar) => el === this.state.gameSequence[i]).reduce((acc, el) => acc && el);
+
+        return (comparison);
     }
 
     render() {
