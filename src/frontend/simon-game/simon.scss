@@ -1,47 +1,82 @@
-.simon {
+@mixin btn-chrts {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    box-shadow: 0px 0px 4px 1px rgba(133,133,133,1);
+}
+
+@media (min-width: 325px) {
+   .simon {
     min-height: 900px;
+    .gamepad {
 
-    table {
-        background: white;
-        border: 1px solid black;
-        border-radius: 50%;
-        text-align: center;
-        padding: 20px 20px;
-        border-collapse: separate;
+        table {
+            background: white;
+            box-shadow: 0px 0px 29px 9px rgba(97,97,97,1);
+            border: 1px solid black;
+            border-radius: 50%;
+            text-align: center;
+            padding: 20px 20px;
+            border-collapse: separate;
 
-        .bottomright{
+            .bottomright{
+                @include btn-chrts();
+                background: red;
+                border-radius: 0 0 150px 0;
+                -moz-border-radius: 0 0 150px 0;
+                -webkit-border-radius: 0 0 150px 0;
+            }
+            .bottomleft{
+                @include btn-chrts();
+                background: blue;
+                border-radius: 0 0 0 150px;
+                -moz-border-radius: 0 0 0 150px;
+                -webkit-border-radius: 0 0 0 150px;
+            }
+            .topright{
+                @include btn-chrts();
+                background: green;
+                border-radius: 0 150px 0 0;
+                -moz-border-radius: 0 150px 0 0;
+                -webkit-border-radius: 0 150px 0 0;
+            }
+            .topleft{
+                @include btn-chrts();
+                background: orange;
+                border-radius: 150px 0 0 0;
+                -moz-border-radius: 150px 0 0 0;
+                -webkit-border-radius: 150px 0 0 0;
+            }
+        }
+
+        .central-panel {
+            background: white;
             width: 150px;
             height: 150px;
-            background: red;
-            border-radius: 0 0 150px 0;
-            -moz-border-radius: 0 0 150px 0;
-            -webkit-border-radius: 0 0 150px 0;
+            position: absolute;
+            top: 33%;
+            border-radius: 50%;
+            .title-panel {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                font-size: 25px;
+                position: relative;
+                top: 14%;
+                left: 17%;
+            }
+            .button-panel {
+                position: absolute;
+                width: 80px;
+                left: 25%;
+                margin-top: 50%;
+            }
+        } 
         }
-        .bottomleft{
-             width: 150px;
-             height: 150px;
-             background: blue;
-             border-radius: 0 0 0 150px;
-             -moz-border-radius: 0 0 0 150px;
-             -webkit-border-radius: 0 0 0 150px;
-        }
-        .topright{
-             width: 150px;
-             height: 150px;
-             background: green;
-             border-radius: 0 150px 0 0;
-             -moz-border-radius: 0 150px 0 0;
-             -webkit-border-radius: 0 150px 0 0;
-        }
-        .topleft{
-             width: 150px;
-             height: 150px;
-             background: orange;
-             border-radius: 150px 0 0 0;
-             -moz-border-radius: 150px 0 0 0;
-             -webkit-border-radius: 150px 0 0 0;
-        }
-
     }
+}
 
+@media (min-width: 580px ) {
+    .simon .gamepad .central-panel {
+        top: 37%;
+    }
 }
