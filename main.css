@@ -1,0 +1,165 @@
+.random-quote-machine {
+  height: 1000px;
+  background: salmon;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: linear; }
+  .random-quote-machine .getquote {
+    margin: 50px; }
+  .random-quote-machine .twitter-share-button {
+    margin: 50px; }
+
+.local-weather {
+  height: 1000px;
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-timing-function: linear; }
+
+.wikipedia-viewer {
+  min-height: 800px; }
+  .wikipedia-viewer .form-inline {
+    transition: all 2s linear;
+    -webkit-transition: all 2s linear;
+    margin-top: -40px; }
+
+.twitch-client {
+  background: #7200f5;
+  color: white;
+  min-height: 1000px; }
+  .twitch-client .card {
+    flex-direction: row;
+    color: black; }
+    .twitch-client .card img {
+      width: 150px;
+      height: 150px; }
+
+.calculator {
+  background: linear-gradient(to right, #cf9413, #b9b8b8);
+  color: rgba(255, 255, 255, 0.932);
+  min-height: 1000px; }
+  .calculator table, .calculator th, .calculator td {
+    background: linear-gradient(to left, #cf9413, #b9b8b8);
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px 45px;
+    border-collapse: separate; }
+    .calculator table .display1, .calculator th .display1, .calculator td .display1 {
+      background: #d8d8d8;
+      color: black;
+      font: 2em  bold;
+      border-top: none;
+      position: relative;
+      top: -2px;
+      text-align: right; }
+    .calculator table .display2, .calculator th .display2, .calculator td .display2 {
+      background: #d8d8d8;
+      color: black;
+      font: 0.875em;
+      text-align: right;
+      border-bottom: none;
+      padding: 2px; }
+
+.pomodoro {
+  background: #f50014;
+  color: white;
+  min-height: 1000px; }
+  .pomodoro .timer {
+    font-size: 100px; }
+
+.tictactoe {
+  background: linear-gradient(to right, #ffffff, #007bff82);
+  color: darkblue;
+  min-height: 1000px; }
+  .tictactoe table, .tictactoe th, .tictactoe td {
+    background: white;
+    border: 1px solid black;
+    text-align: center;
+    padding: 45px 45px;
+    border-collapse: separate; }
+    .tictactoe table td, .tictactoe th td, .tictactoe td td {
+      height: 120px;
+      width: 120px; }
+
+@media (min-width: 325px) {
+  .simon {
+    min-height: 900px; }
+    .simon .gamepad table {
+      background: white;
+      box-shadow: 0px 0px 29px 9px #616161;
+      border: 1px solid black;
+      border-radius: 50%;
+      text-align: center;
+      padding: 20px 20px;
+      border-collapse: separate; }
+      .simon .gamepad table .bottomright {
+        cursor: pointer;
+        width: 150px;
+        height: 150px;
+        box-shadow: 0px 0px 4px 1px #858585;
+        background: red;
+        border-radius: 0 0 150px 0;
+        -moz-border-radius: 0 0 150px 0;
+        -webkit-border-radius: 0 0 150px 0; }
+      .simon .gamepad table .bottomleft {
+        cursor: pointer;
+        width: 150px;
+        height: 150px;
+        box-shadow: 0px 0px 4px 1px #858585;
+        background: blue;
+        border-radius: 0 0 0 150px;
+        -moz-border-radius: 0 0 0 150px;
+        -webkit-border-radius: 0 0 0 150px; }
+      .simon .gamepad table .topright {
+        cursor: pointer;
+        width: 150px;
+        height: 150px;
+        box-shadow: 0px 0px 4px 1px #858585;
+        background: green;
+        border-radius: 0 150px 0 0;
+        -moz-border-radius: 0 150px 0 0;
+        -webkit-border-radius: 0 150px 0 0; }
+      .simon .gamepad table .topleft {
+        cursor: pointer;
+        width: 150px;
+        height: 150px;
+        box-shadow: 0px 0px 4px 1px #858585;
+        background: orange;
+        border-radius: 150px 0 0 0;
+        -moz-border-radius: 150px 0 0 0;
+        -webkit-border-radius: 150px 0 0 0; }
+    .simon .gamepad .central-panel {
+      background: white;
+      width: 150px;
+      height: 150px;
+      position: absolute;
+      top: 33%;
+      border-radius: 50%; }
+      .simon .gamepad .central-panel .title-panel {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        position: relative;
+        top: 14%;
+        left: 17%; }
+      .simon .gamepad .central-panel .strict-hold {
+        width: 70px;
+        margin-top: 20px;
+        position: relative;
+        left: 30%; }
+        .simon .gamepad .central-panel .strict-hold .text-muted {
+          padding-left: 5px; }
+        .simon .gamepad .central-panel .strict-hold .strict.btn.btn-danger.active {
+          background-color: green;
+          transition: 1s background-color linear; }
+      .simon .gamepad .central-panel .button-panel {
+        position: absolute;
+        width: 80px;
+        left: 25%;
+        margin-top: 60%; } }
+
+@media (min-width: 580px) {
+  .simon .gamepad .central-panel {
+    top: 37%; } }
+
+
+/*# sourceMappingURL=main.css.map*/
