@@ -149,6 +149,12 @@ export default class SimonGame extends Component {
                     <div className="central-panel justify-content-center">
                         <span className="title-panel">SIMON</span>
                         <button type="button" className="button-panel btn btn-dark" onClick={() => this.startGame()}>{this.state.displayText}</button>
+                        <div className="strict-hold d-inline-block">
+                            <button type="button" className="strict btn btn-danger" data-toggle="button" aria-pressed="false" autoComplete="off">
+                            </button>
+                            <small className="text-muted">strict</small>
+
+                        </div>
                     </div>
                 </div>
             </div>
