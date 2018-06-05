@@ -28,7 +28,7 @@ export default class SimonGame extends Component {
 
 
     componentDidUpdate(prevProps, prevState) {
-        if ((this.state.steps > prevState.steps) && this.state.steps < 11) {
+        if ((this.state.steps !== prevState.steps) && this.state.steps < 11) {
             setTimeout(() => this.playGameSequence(this.state.steps), 2000);
         } else if (this.state.steps === 6 && prevState.steps === 10) {
             this.setState({ displayText: "Victory" });
@@ -99,8 +99,14 @@ export default class SimonGame extends Component {
                     }
                 } else {
                     setTimeout(() => this.setState({ displayText: "!!", playerSequence: [] }), 1);
-                    setTimeout(() => this.setState({ displayText: this.state.steps < 10 ? `0${this.state.steps}` : `${this.state.steps}` }), 2000);
-                    setTimeout(() => this.playGameSequence(this.state.steps), 2000);
+                    if(!this.state.strict) {
+
+                        setTimeout(() => this.setState({ displayText: this.state.steps < 10 ? `0${this.state.steps}` : `${this.state.steps}` }), 2000);
+                        setTimeout(() => this.playGameSequence(this.state.steps), 2000);
+                    }
+                    else if (this.state.strict) {
+                        setTimeout(() => this.setState({steps:1, gameSequence:[], displayText: "01"}), 2000);
+                    }
                 }
             }
         }
@@ -122,6 +128,10 @@ export default class SimonGame extends Component {
         const comparison = playerSeq.map((el, i, ar) => el === this.state.gameSequence[i]).reduce((acc, el) => acc && el);
 
         return (comparison);
+    }
+
+    strictOnOff() {
+        this.setState(prevState => ({ strict: !prevState.strict}));
     }
 
     render() {
@@ -150,7 +160,8 @@ export default class SimonGame extends Component {
                         <span className="title-panel">SIMON</span>
                         <button type="button" className="button-panel btn btn-dark" onClick={() => this.startGame()}>{this.state.displayText}</button>
                         <div className="strict-hold d-inline-block">
-                            <button type="button" className="strict btn btn-danger" data-toggle="button" aria-pressed="false" autoComplete="off">
+                            <button type="button" className="strict btn btn-danger" data-toggle="button" aria-pressed="false" autoComplete="off"
+                            onClick={() => this.strictOnOff()}>
                             </button>
                             <small className="text-muted">strict</small>
 
