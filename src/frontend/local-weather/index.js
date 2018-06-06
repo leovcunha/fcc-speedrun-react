@@ -41,7 +41,7 @@ export default class LocalWeather extends Component {
                 .then(pos => {
                     this.setState({ position: pos.coords });
                 }).then(() =>
-                    axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${this.state.position.latitude}&lon=${this.state.position.longitude}&appid=663256a5a9993f3aa5e9f557920e8f24`)
+                    axios.get(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat=${this.state.position.latitude}&lon=${this.state.position.longitude}&appid=663256a5a9993f3aa5e9f557920e8f24`)
                         .then(res => this.setState({ data: res.data })))
                 .then(() => {
                     const celsius = this.state.data.main;

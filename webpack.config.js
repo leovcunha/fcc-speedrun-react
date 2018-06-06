@@ -1,27 +1,47 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const GhPagesWebpackPlugin = require('gh-pages-webpack-plugin');
 
-module.exports = {
+module.exports = (env, argv) => (
+    {
     entry: "./index.js",
-
+    
     output: {
-        path: path.resolve(__dirname, "docs"),
+        path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
-        publicPath: "/"
+        publicPath: argv.mode === "production" ? "/fcc-speedrun-react" : "/"
     },
-    devtool: "inline-source-map",
+    devtool: "source-map",
     devServer: {
         historyApiFallback: true
     },
 
-    plugins: [
+    plugins:  [
 
         new HtmlWebpackPlugin({ // production
             hash: false,
             template: "./index.html",
-            filename: path.join(__dirname, "docs", "index.html")
-        })
+            filename: path.join(__dirname, "dist", "index.html")
+        }),
+
+        new MiniCssExtractPlugin({
+            filename:  "[name].css",
+            chunkFilename: "[id].css"
+
+        }),
+
+        new UglifyJsPlugin(
+        {
+             uglifyOptions: {
+              output: {
+                comments: false,
+                beautify: false,
+              }
+             }
+        }),
     ],
 
     module: {
@@ -39,7 +59,7 @@ module.exports = {
             {
                 test: /\.s?css$/,
                 use: [
-                    "style-loader", // creates style nodes from JS strings
+                     MiniCssExtractPlugin.loader,
                     "css-loader", // translates CSS into CommonJS
                     "sass-loader" // compiles Sass to CSS
                 ]
@@ -52,7 +72,7 @@ module.exports = {
                         options: {
                             name: "[name].[ext]",
                             outputPath: "assets",
-                            publicPath: "/assets"
+                            publicPath: argv.mode === "production" ? "/fcc-speedrun-react/assets" : "/assets"
                         }
                     }
                 ]
@@ -61,4 +81,4 @@ module.exports = {
     }
 
 
-};
+});
