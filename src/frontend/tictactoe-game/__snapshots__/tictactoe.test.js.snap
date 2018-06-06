@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tictactoe renders without crashing 1`] = `
+<div
+  className="tictactoe jumbotron"
+>
+  <div
+    className="row h1 justify-content-center"
+  >
+    Tic Tac Toe
+  </div>
+  <hr
+    className="p-5"
+  />
+  <div>
+    <div
+      className="buttons"
+    >
+      <div
+        className="row justify-content-center mb-5"
+      >
+        <h2>
+          Choose your Mark!
+        </h2>
+      </div>
+      <div
+        className="row justify-content-center"
+      >
+        <button
+          className="btn btn-primary mr-2"
+          onClick={[Function]}
+        >
+          X
+        </button>
+        <button
+          className="btn btn-primary ml-2"
+          onClick={[Function]}
+        >
+          O
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

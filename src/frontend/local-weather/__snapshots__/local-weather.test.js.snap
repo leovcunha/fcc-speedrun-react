@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tribute-page renders without crashing 1`] = `
+exports[`local-weather renders without crashing 1`] = `
 <div
   className="local-weather jumbotron"
 >
@@ -31,7 +31,7 @@ exports[`tribute-page renders without crashing 1`] = `
     >
        Temperature is:  
       <h5>
-        -273.0
+        0.0
          C
       </h5>
     </div>
@@ -40,7 +40,7 @@ exports[`tribute-page renders without crashing 1`] = `
     >
        Max:  
       <h5>
-        -273.0
+        0.0
          C
       </h5>
     </div>
@@ -49,7 +49,7 @@ exports[`tribute-page renders without crashing 1`] = `
     >
        Min:  
       <h5>
-        -273.0
+        0.0
          C
       </h5>
     </div>

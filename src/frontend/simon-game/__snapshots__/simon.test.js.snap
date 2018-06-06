@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`simon renders without crashing 1`] = `
+<div
+  className="simon jumbotron"
+>
+  <div
+    className="row h1 justify-content-center"
+  >
+    Simon Game
+  </div>
+  <hr
+    className="p-5"
+  />
+  <div
+    className="gamepad row justify-content-center"
+  >
+    <table>
+      <tbody>
+        <tr>
+          <td
+            className="topleft"
+            onClick={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            1
+          </td>
+          <td
+            className="topright"
+            onClick={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            2
+          </td>
+        </tr>
+        <tr>
+          <td
+            className="bottomleft"
+            onClick={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            3
+          </td>
+          <td
+            className="bottomright"
+            onClick={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            4
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div
+      className="central-panel justify-content-center"
+    >
+      <span
+        className="title-panel"
+      >
+        SIMON
+      </span>
+      <button
+        className="button-panel btn btn-dark"
+        onClick={[Function]}
+        type="button"
+      >
+        START
+      </button>
+      <div
+        className="strict-hold d-inline-block"
+      >
+        <button
+          aria-pressed="false"
+          autoComplete="off"
+          className="strict btn btn-danger"
+          data-toggle="button"
+          onClick={[Function]}
+          type="button"
+        />
+        <small
+          className="text-muted"
+        >
+          strict
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+`;

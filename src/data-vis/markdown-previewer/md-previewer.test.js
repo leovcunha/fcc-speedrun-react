@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import TicTacToe from "../tictactoe-game";
+import MDPreviewer from "../markdown-previewer";
 
-describe("simon", () => {
+describe("md-previewer", () => {
     it("renders without crashing", () => {
-        const component = renderer.create(<Simon/>).toJSON();
+        const component = renderer.create(<MDPreviewer/>).toJSON();
         expect(component).toMatchSnapshot();
     });
 });

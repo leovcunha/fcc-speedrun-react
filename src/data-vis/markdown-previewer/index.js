@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import axios from "axios";
-import marked from "marked"
+import marked from "marked";
 
 
-import './md-previewer.scss'
+import "./md-previewer.scss";
 
 export default class MDPreviewer extends Component {
     constructor(props) {
@@ -20,12 +20,13 @@ export default class MDPreviewer extends Component {
     }
     componentDidUpdate(prevProps, prevState) {
         if (this.state.text !== prevState.text) {
-            this.setState({ marked: marked(this.state.text, {sanitize: true}) });
+            this.setState({ marked: marked(this.state.text, { sanitize: true }) });
         }
     }
 
-    handleChange() {
-        this.setState({text: event.target.value});
+    handleChange(event) {
+        event.preventDefault();
+        this.setState({ text: event.target.value });
     }
 
     render() {
@@ -35,9 +36,9 @@ export default class MDPreviewer extends Component {
                 <hr className="p-3"/>
                 <div className="row">
                     <div className="col-sm-6">
-                    <textarea value={this.state.text} onChange={() => this.handleChange()} />
+                        <textarea value={this.state.text} onChange={(event) => this.handleChange(event)} />
                     </div>
-                    <div className="col-sm-6" dangerouslySetInnerHTML={{__html: this.state.marked}}></div>
+                    <div className="col-sm-6" dangerouslySetInnerHTML={{ __html: this.state.marked }}></div>
                 </div>
             </div>
         );

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`md-previewer renders without crashing 1`] = `
+<div
+  className="md-previewer jumbotron"
+>
+  <div
+    className="row h1 justify-content-center"
+  >
+    Markdown Previewer
+  </div>
+  <hr
+    className="p-3"
+  />
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-6"
+    >
+      <textarea
+        onChange={[Function]}
+        value="Heading
+=======
+
+Sub-heading
+-----------
+ 
+### Another deeper heading
+ 
+Paragraphs are separated
+by a blank line.
+
+Leave 2 spaces at the end of a line to do a  
+line break
+
+Text attributes *italic*, **bold**, 
+\`monospace\`, ~~strikethrough~~ .
+
+Shopping list:
+
+  * apples
+  * oranges
+  * pears
+
+Numbered list:
+
+  1. apples
+  2. oranges
+  3. pears
+
+"
+      />
+    </div>
+    <div
+      className="col-sm-6"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<h1 id=\\"heading\\">Heading</h1>
+<h2 id=\\"sub-heading\\">Sub-heading</h2>
+<h3 id=\\"another-deeper-heading\\">Another deeper heading</h3>
+<p>Paragraphs are separated
+by a blank line.</p>
+<p>Leave 2 spaces at the end of a line to do a<br>line break</p>
+<p>Text attributes <em>italic</em>, <strong>bold</strong>, 
+<code>monospace</code>, <del>strikethrough</del> .</p>
+<p>Shopping list:</p>
+<ul>
+<li>apples</li>
+<li>oranges</li>
+<li>pears</li>
+</ul>
+<p>Numbered list:</p>
+<ol>
+<li>apples</li>
+<li>oranges</li>
+<li>pears</li>
+</ol>
+",
+        }
+      }
+    />
+  </div>
+</div>
+`;
