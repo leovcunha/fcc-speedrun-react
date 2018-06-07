@@ -26,8 +26,8 @@
 | [Build a Pomodoro Clock](./src/frontend/pomodoro-clock)                                     |     27/05     |           |           |      |
 | [Build a Tic Tac Toe Game](./src/frontend/tictactoe-game)                                   |     31/05     |           |           |      |
 | [Build a Simon Game](./src/frontend/simon-game)                                             |     04/06     |           |           |      |
-| [Build a Markdown Previewer](./src/data-vis/markdown-previewer)                             |               |           |           |      |
-| [Build a Camper Leaderboard](./src/data-vis/camper-leaderboard)                             |               |           |           |      |
+| [Build a Markdown Previewer](./src/data-vis/markdown-previewer)                             |     06/06     |           |           |      |
+| [Build a Camper Leaderboard](./src/data-vis/camper-leaderboard)                             |     broken    |           |           |      |
 | [Build a Recipe Box](./src/data-vis/recipe-box)                                             |               |           |           |      |
 | [Build the Game of Life](./src/data-vis/game-of-life)                                       |               |           |           |      |
 | [Build a Roguelike Dungeon Crawler](./src/data-vis/dungeon-crawler)                         |               |           |           |      |
