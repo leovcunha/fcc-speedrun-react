@@ -73,7 +73,7 @@ export default function Sidebar() {
                         <div className="card-header" id="headingTwo">
                             <h5 className="mb-0">
                                 <button className="btn btn-link" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false"
-                                    aria-controls="collapseOne collapseTwo collapseThree collapseFour collapseFive">
+                                    aria-controls="collapseOne collapseTwo collapseThree">
                                 Data Visualization
                                 </button>
                             </h5>
@@ -86,15 +86,10 @@ export default function Sidebar() {
                         </div>
                         <div id="collapseTwo" className="collapse multi-collapse " aria-labelledby="headingTwo" data-parent="#accordionbar">
                             <div className="card-body">
-                                <Link to="/camper-board">Camper Leaderboard</Link>
-                            </div>
-                        </div>
-                        <div id="collapseThree" className="collapse multi-collapse " aria-labelledby="headingTwo" data-parent="#accordionbar">
-                            <div className="card-body">
                                 <Link to="/recipe-box">Recipe Box</Link>
                             </div>
                         </div>
-                        <div id="collapseFour" className="collapse multi-collapse " aria-labelledby="headingTwo" data-parent="#accordionbar">
+                        <div id="collapseThree" className="collapse multi-collapse " aria-labelledby="headingTwo" data-parent="#accordionbar">
                             <div className="card-body">
                                 <Link to="/game-of-life">Game of Life</Link>
                             </div>

@@ -1,0 +1,17 @@
+.recipe-box {
+    background: #425566;
+    color: white;
+    min-height: 900px;
+
+    .recipecard {
+        flex-direction: row;
+        color: #212529;
+        background-color: #e2e6ea
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+    }
+}

@@ -12,6 +12,7 @@ import Pomodoro from "../frontend/pomodoro-clock";
 import TicTacToe from "../frontend/tictactoe-game";
 import SimonGame from "../frontend/simon-game";
 import MDPreviewer from "../data-vis/markdown-previewer";
+import RecipeBox from "../data-vis/recipe-box";
 
 export default function Content(props) {
     return (
@@ -29,6 +30,7 @@ export default function Content(props) {
                 <Route path='/tictactoe' component={TicTacToe}/>
                 <Route path='/simon' component={SimonGame}/>
                 <Route path='/md-previewer' component={MDPreviewer}/>
+                <Route path='/recipe-box' component={RecipeBox}/>
             </Switch>
         </main>
     );

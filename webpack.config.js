@@ -8,7 +8,7 @@ const GhPagesWebpackPlugin = require('gh-pages-webpack-plugin');
 module.exports = (env, argv) => (
     {
     entry: "./index.js",
-    
+
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "bundle.js",
@@ -59,7 +59,7 @@ module.exports = (env, argv) => (
             {
                 test: /\.s?css$/,
                 use: [
-                     MiniCssExtractPlugin.loader,
+                     argv.mode === "production" ? MiniCssExtractPlugin.loader : "style-loader",
                     "css-loader", // translates CSS into CommonJS
                     "sass-loader" // compiles Sass to CSS
                 ]
