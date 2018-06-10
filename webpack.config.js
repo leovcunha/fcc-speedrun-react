@@ -19,7 +19,7 @@ module.exports = (env, argv) => (
         historyApiFallback: true
     },
 
-    plugins:  [
+    plugins: argv.mode === "production" ? [
 
         new HtmlWebpackPlugin({ // production
             hash: false,
@@ -42,7 +42,14 @@ module.exports = (env, argv) => (
               }
              }
         }),
-    ],
+    ] : [
+            new HtmlWebpackPlugin({ // production
+            hash: false,
+            template: "./index.html",
+            filename: path.join(__dirname, "dist", "index.html")
+        }),
+        ]
+    ,
 
     module: {
         rules: [

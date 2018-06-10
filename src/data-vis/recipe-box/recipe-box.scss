@@ -5,13 +5,16 @@
 
     .recipecard {
         flex-direction: row;
-        color: #212529;
-        background-color: #e2e6ea
-
-        img {
-            width: 150px;
-            height: 150px;
+        .card-header {
+            color: #212529;
+            background-color: #e2e6ea;
+            .btn-link { color: inherit; }
         }
+        .card-body {
+            color: #212529;
+            background-color: #e2e6ea
+        }
+
 
     }
 }
