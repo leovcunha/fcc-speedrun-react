@@ -89,11 +89,6 @@ export default function Sidebar() {
                                 <Link to="/recipe-box">Recipe Box</Link>
                             </div>
                         </div>
-                        <div id="collapseThree" className="collapse multi-collapse " aria-labelledby="headingTwo" data-parent="#accordionbar">
-                            <div className="card-body">
-                                <Link to="/game-of-life">Game of Life</Link>
-                            </div>
-                        </div>
 
                     </div>
                 </div>

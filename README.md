@@ -9,8 +9,8 @@
 -----
 
 - Start date: 11/05/2018
-- End Date:
-- Projects Completed: 0
+- End Date: 09/06/2018
+- Projects Completed: 12
 
 -----
 
@@ -28,7 +28,7 @@
 | [Build a Simon Game](./src/frontend/simon-game)                                             |     04/06     |           |           |      |
 | [Build a Markdown Previewer](./src/data-vis/markdown-previewer)                             |     06/06     |           |           |      |
 | [Build a Camper Leaderboard](./src/data-vis/camper-leaderboard)                             |     broken    |           |           |      |
-| [Build a Recipe Box](./src/data-vis/recipe-box)                                             |               |           |           |      |
+| [Build a Recipe Box](./src/data-vis/recipe-box)                                             |     09/06     |           |           |      |
 | [Build the Game of Life](./src/data-vis/game-of-life)                                       |               |           |           |      |
 | [Build a Roguelike Dungeon Crawler](./src/data-vis/dungeon-crawler)                         |               |           |           |      |
 | [Visualize Data with a Bar Chart](./src/data-vis/bar-chart)                                 |               |           |           |      |
