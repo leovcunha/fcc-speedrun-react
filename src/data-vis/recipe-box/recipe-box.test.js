@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import TwitchClient from "../twitch-client";
+import RecipeBox from "../recipe-box";
 
-describe("twitch client", () => {
+describe("recipe box", () => {
     it("renders without crashing", () => {
-        const component = renderer.create(<TwitchClient/>).toJSON();
+        const component = renderer.create(<RecipeBox/>).toJSON();
         expect(component).toMatchSnapshot();
     });
 });

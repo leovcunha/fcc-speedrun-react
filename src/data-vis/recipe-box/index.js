@@ -8,7 +8,10 @@ import "./recipe-box.scss";
 export default class RecipeBox extends Component {
     constructor(props) {
         super(props);
-        this.saveNewRecipe = this.saveNewRecipe.bind(this);
+        this.saveRecipe = this.saveRecipe.bind(this);
+        this.deleteRecipe = this.deleteRecipe.bind(this);
+        this.editRecipe = this.editRecipe.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
 
         this.state = {
             recipes: [
@@ -20,33 +23,83 @@ export default class RecipeBox extends Component {
                                   Cook cauliflower on the grill until char marks appear, 2 to 3 minutes per side. Transfer to a grill-safe pan with
                                   a lid, cover, and continue cooking on grill until tender, about 20 minutes.`
                 },
-                {}
+            ],
 
+            modalTitle: "",
+            modalIngredients: "",
+            modalPreparation: "",
+            modalIndex: -1
 
-                ]
         };
     }
-    componentWillMount() {
+    componentDidMount() {
         this.getCachedRecipes();
-
     }
-    componentWillUnmount() {
+
+    componentDidUpdate() {
         this.saveRecipestoCache();
     }
 
     getCachedRecipes() {
         const RecipesData = localStorage.getItem("recipes");
-        if (RecipesData) {
+        if (RecipesData !== "[]" && RecipesData !== null) {
             this.setState({ recipes: JSON.parse(RecipesData) });
         }
     }
 
-    saveNewRecipe(recipe) {
-        this.setState(prevState => { recipes: prevState.recipes.push(recipe) });
+    saveRecipe(recipe, index = -1) {
+        const recs = this.state.recipes.slice();
+        if (index === -1) { // new
+            recs.push(recipe);
+        } else {
+            recs[index] = recipe;
+        }
+        this.setState({
+            recipes: recs,
+            modalIngredients: "",
+            modalPreparation: "",
+            modalTitle: "",
+            modalIndex: -1
+        });
     }
 
     saveRecipestoCache() {
-        localStorage.setItem("recipesData", JSON.stringify(this.state.recipes));
+        localStorage.setItem("recipes", JSON.stringify(this.state.recipes));
+    }
+
+    handleInputChange(event) {
+        const name = event.target.name;
+
+        this.setState({
+            [name]: event.target.value
+        });
+    }
+
+    deleteRecipe(i) {
+        console.log(i);
+        const recs = this.state.recipes.slice();
+        console.log(recs);
+        recs.splice(i, 1);
+        console.log(recs);
+        this.setState({ recipes: recs });
+    }
+    editRecipe(i) {
+        const rec = this.state.recipes[i];
+        this.setState({
+            modalIngredients: rec.ingredients.join(),
+            modalPreparation: rec.preparation,
+            modalTitle: rec.title,
+            modalIndex: i
+        });
+    }
+
+    newRecipe() {
+        this.setState({
+            modalIngredients: "",
+            modalPreparation: "",
+            modalTitle: "",
+            modalIndex: -1
+        });
     }
 
     render() {
@@ -56,10 +109,10 @@ export default class RecipeBox extends Component {
                 <hr className="p-3"/>
                 <div className="accordion" id="accordionRecipes">
                     {this.state.recipes.map((recipe, index) => <RecipeCard key={index} index={index} title={recipe.title} ingredients={recipe.ingredients}
-                    preparation={recipe.preparation}/>)}
+                        preparation={recipe.preparation} deleteRecipe={this.deleteRecipe} editRecipe={this.editRecipe}/>)}
                 </div>
-                <button type="button" className="btn btn-light" data-toggle="modal" data-target="#recipeModal">New Recipe</button>
-                <RecipeModal saveNewRecipe={this.saveNewRecipe}/>
+                <button type="button" className="btn btn-light" data-toggle="modal" data-target="#recipeModal" onClick={() => this.newRecipe()}>New Recipe</button>
+                <RecipeModal index={this.state.modalIndex} title={this.state.modalTitle} ingredients={this.state.modalIngredients} preparation={this.state.modalPreparation} saveRecipe={this.saveRecipe} handleInputChange={this.handleInputChange}/>
 
             </div>
         );

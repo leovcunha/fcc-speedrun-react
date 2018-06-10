@@ -12,9 +12,25 @@
         }
         .card-body {
             color: #212529;
-            background-color: #e2e6ea
+            background-color: white;
+            .list-group {
+                
+                margin-bottom: 20px;
+            }
+        }
+        .card-footer {
+            margin-top: 20px;
         }
 
 
+    }
+    .modal-title {
+        margin-bottom: 10px;
+    }
+    .modal-prep {
+        
+    }
+    .modal-ing {
+        margin-bottom: 10px;
     }
 }
